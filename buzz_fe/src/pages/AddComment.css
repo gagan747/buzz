@@ -1,0 +1,18 @@
+.addcomment{
+    width:70%;
+    border-radius:17px;
+}
+.image{
+	border-radius:28px;
+}
+.form{
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.form *{
+    margin:5px;
+    border:none;
+    height:40px;
+}

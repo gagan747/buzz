@@ -1,0 +1,8 @@
+{
+    "name": "Buzz App-development",
+    "PORT":  5000,
+    "MONGO_URI" : "mongodb://localhost/buzz",
+    "HOME_URL" : "http://localhost:3000/home",
+    "CALLBACK_URL" :"http://localhost:5000/auth/google/callback",
+    "LOGINPAGE_URL" :"http://localhost:3000/login/error"
+}

@@ -1,0 +1,37 @@
+.users-suggestions{
+    position:fixed;
+    right:5vw;
+    bottom:4vh;
+    height:40vh;
+    overflow:auto;
+    width:21vw;
+    background-color:white;
+}
+.users-suggestions::-webkit-scrollbar {
+    display: none;
+   }
+.image {
+    border-radius: 20px;
+  }
+  .users-container{
+   margin:14px;
+   display:flex;
+   justify-content: space-between;
+  }
+  .suggestions-search{
+      width:400px;
+      display:flex;
+     justify-content: center;
+      height:50px;
+     background-color: white;
+     margin-bottom:-12px;
+     
+  }
+  .suggestions-search input{
+     border:none;
+     width:80%; 
+     margin-right:5px;
+   }
+   .suggestions-search i{
+     padding-top: 14px;
+   }

@@ -1,0 +1,18 @@
+.header {
+  background-color: #5bc0de;
+  color: white;
+}
+.primary-box {
+  height: 35vw;
+  width: 55vw;
+  background-color: white;
+}
+.primary-box::-webkit-scrollbar {
+  display: none;
+}
+.img-box {
+  height: 3rem;
+  width: 3rem;
+  object-fit: cover;
+  border-radius: 50% !important;
+}
