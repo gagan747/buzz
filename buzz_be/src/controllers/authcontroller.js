@@ -28,6 +28,7 @@ async function userlogin(req, res, next) {
     }
     res.status(401).json({ message: 'Invalid Password' });
   } catch (err) {
+    console.log(err)
     return res.status(401).json({ message: ` ${err}` });
   }
 }

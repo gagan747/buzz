@@ -10,6 +10,7 @@ const comments = require('./routes/comments');
 const friends = require('./routes/friends');
 const searchsuggestions = require('./routes/searchsuggestions');
 const suggestions = require('./routes/suggestions.js');
+
 const app = express();
 require('dotenv').config();
 const feed = require('./routes/feed');
