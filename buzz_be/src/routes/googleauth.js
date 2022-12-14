@@ -17,6 +17,7 @@ router.get(
   '/callback',
   passport.authenticate('google', { failureRedirect: '/auth/fail' }),
   async (req, res, next) => {
+    console.log('meow',req.user)
     try {
       if (!/^[A-Za-z0-9._]{3,30}@tothenew.com$/.test(req.user.profile._json.email)) {
         res.redirect(config.get('LOGINPAGE_URL'));
@@ -37,6 +38,7 @@ router.get(
           { _id: user._id, is_Admin: user.is_Admin },
           process.env.JWT_SECRET_KEY,
         );
+       
         res.redirect(`${config.get('HOME_URL')}/${token}`);
         return;
       }
@@ -44,6 +46,7 @@ router.get(
         { _id: result._id, is_Admin: result.is_Admin },
         process.env.JWT_SECRET_KEY,
       );
+      console.log('before serealize')
       res.redirect(`${config.get('HOME_URL')}/${token}`);
       return;
     } catch (err) {

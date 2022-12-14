@@ -15,8 +15,8 @@ router.post('/:feed_Id', validateComment, async (req, res) => {
     const user_Id = req.user_id;
     const { feed_Id } = req.params;
     const commentData = new Comments({ comment, user_Id, feed_Id });
-    await commentData.populate('user_Id');
     await commentData.save();
+    await commentData.populate('user_Id');
 
     res.status(200).json({ message: 'Comment added', data: commentData });
   } catch (err) {

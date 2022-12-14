@@ -5,15 +5,21 @@ const passport = require('passport');
 const config = require('config');
 
 passport.serializeUser((user, cb) => {
+  console.log('serealize', user);
   cb(null, user);
+ 
+ 
 });
 passport.deserializeUser((obj, cb) => {
-  cb(null, obj);
+  console.log('deserealize', "meow");
+
+  cb(null, "meow");
 });
 passport.use(new GoogleStrategy({
   clientID: process.env.GOOGLE_CLIENT_ID,
   clientSecret: process.env.GOOGLE_SECRET,
-  callbackURL: config.get('CALLBACK_URL'),
+  callbackURL: process.env.CALLBACK_URL,
 }, ((accessToken, refreshToken, profile, done) => {
+  console.log('strategy',profile.provider)
   done(null, { profile });
 })));
